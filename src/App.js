@@ -1,5 +1,6 @@
 import React from "react";
-import {HashRouter,Route,BrowserRouter} from "react-router-dom";
+import {HashRouter,Route} from "react-router-dom";
+import Detail from "./routes/Detail";
 import About from "./routes/About";
 import Home from "./routes/Home";
 import "./App.css";
@@ -11,6 +12,7 @@ function App() {
             <Navigation />
             <Route path="/" exact={true} component={Home} />
             <Route path="/about" exact={true} component={About} />
+            <Route path="/movie/:id" exact={true} component={Detail} />
         </HashRouter>
     );
 }
